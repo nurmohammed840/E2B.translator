@@ -14,14 +14,19 @@ let obj = b.reduce((obj, b) => {
     return obj;
 }, {} as any)
 
-// let c = 0;
-// for (const [x, _y] of a) {
-//     if (!obj[x]) {
-//         c++
-//     }
-//     // let g = obj[x] as string;
-//     // if (g?.localeCompare(y)) {
-//     //     str += `${g}\t|\t${y}\n`
-//     // }
-// }
-// console.log(c)
+for (const [x, y] of a) {
+    let g = obj[x] as string;
+    if (!g) {
+        obj[x] ??= [];
+        obj[x].push(y);
+    } else {
+        try {
+            if (g.localeCompare(y)) {
+                //     str += `${g}\t|\t${y}\n`
+            }
+        } catch (_) {
+            console.log(g)
+        }
+
+    }
+}
