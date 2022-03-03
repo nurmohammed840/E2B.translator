@@ -1,0 +1,1 @@
+e2b.txt, Seperator: # => en|en_syns[]|bn|bn_syns[]|sents[]  
